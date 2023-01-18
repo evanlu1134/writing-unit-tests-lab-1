@@ -10,18 +10,28 @@ const removeVowels = (arr) => {
 };
 
 // Question 3
-const wordCap = () => {
-
+const wordCap = (str) => {
+  return str.split(" ").map(word => word[0].toUpperCase() + word.toLowerCase().slice(1,word.length)).join(" ")
 };
 
 // Question 4
-const swapCase = () => {
-
+const swapCase = (str) => {
+  return str.split("").map(word => word === word.toUpperCase() ? word = word.toLowerCase() : word = word.toUpperCase()).join("")
 };
 
 // Question 5
-const staggeredCase = () => {
-
+const staggeredCase = (str) => {
+let run = true
+let result = ""
+const nonAlphabet = /[^A-Z\s]/gi
+for(let i = 0; i < str.length;i++){
+  if(str[i] === " " || str[i].match(nonAlphabet)) {
+    result += str[i]
+    continue
+  }
+  run ? (result += str[i].toUpperCase(), run = false) : (result += str[i].toLowerCase(), run = true)
+}
+  return result
 };
 
 // Question 6
