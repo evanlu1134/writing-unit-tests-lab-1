@@ -42,8 +42,9 @@ const wordLengths = (str) => {
 };
 
 // Question 7
-const searchWord = () => {
-
+const searchWord = (str,text) => {
+const regexStr = new RegExp(`(${str})([^a-z0-9])?$`, "gi");
+return text.split(" ").filter(char => char.match(regexStr)).length
 };
 
 
