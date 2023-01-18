@@ -1,6 +1,6 @@
 // Question 1
-const isUpperCase = () => {
-
+const isUpperCase = (str) => {
+  return str === str.toUpperCase()
 };
 
 // Question 2
