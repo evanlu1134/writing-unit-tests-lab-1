@@ -35,8 +35,10 @@ for(let i = 0; i < str.length;i++){
 };
 
 // Question 6
-const wordLengths = () => {
-
+const wordLengths = (str) => {
+  return str ? str.split(" ").map(word => {
+    return word =`${word} ${word.length}`
+  }) : []
 };
 
 // Question 7
