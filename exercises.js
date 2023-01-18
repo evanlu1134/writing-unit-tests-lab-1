@@ -4,8 +4,9 @@ const isUpperCase = (str) => {
 };
 
 // Question 2
-const removeVowels = () => {
-
+const removeVowels = (arr) => {
+  const regex = /[aeiou]/gi
+  return arr.map(word => word = word.replace(regex,""))
 };
 
 // Question 3
